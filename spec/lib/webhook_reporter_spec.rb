@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe WebhookReporter do
+RSpec.describe StatusReporter::WebhookReporter do
   context "with all callback URLs specified" do
     let(:reporter) { FactoryGirl.build :webhook_reporter }
     
