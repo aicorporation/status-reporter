@@ -2,7 +2,7 @@ require 'httparty'
 require 'lib/status_reporter/base_reporter'
 
 module StatusReporter
-  class WebhookReporter < BaseReporter
+  class WebhookReporter < StatusReporter::BaseReporter
 
     attr_accessor :success_url, :failure_url, :status_url
   

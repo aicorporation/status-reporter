@@ -2,7 +2,7 @@ require 'faye'
 require 'lib/status_reporter/base_reporter'
 
 module StatusReporter
-  class FayeReporter < BaseReporter
+  class FayeReporter < StatusReporter::BaseReporter
   
     attr_accessor :faye_channel
   
