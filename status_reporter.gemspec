@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'status_reporter'
+  s.name        = 'status-reporter'
   s.version     = '0.0.1'
   s.date        = '2015-02-02'
   s.summary     = 'StatusReporter'
