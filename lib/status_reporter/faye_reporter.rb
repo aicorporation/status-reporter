@@ -1,5 +1,5 @@
 require 'faye'
-require 'lib/status_reporter/base_reporter'
+require 'status_reporter/base_reporter'
 
 module StatusReporter
   class FayeReporter < StatusReporter::BaseReporter
