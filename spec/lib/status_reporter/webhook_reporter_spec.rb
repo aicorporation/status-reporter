@@ -5,17 +5,17 @@ RSpec.describe WebhookReporter do
     let(:reporter) { FactoryGirl.build :webhook_reporter }
     
     it "should report success" do
-      expect_any_instance_of(HTTParty).to receive(:post)
+      expect(HTTParty).to receive(:post).with(reporter.success_url, {body: nil})
       reporter.report_success
     end
   
     it "should report failure" do
-      expect_any_instance_of(HTTParty).to receive(:post)
+      expect(HTTParty).to receive(:post).with(reporter.failure_url, {body: nil})
       reporter.report_failure
     end
   
     it "should report status" do
-      expect_any_instance_of(HTTParty).to receive(:post)
+      expect(HTTParty).to receive(:post).with(reporter.status_url, {body: nil})
       reporter.report_status
     end
     
@@ -26,17 +26,17 @@ RSpec.describe WebhookReporter do
       }
     
       it "should report success" do
-        expect_any_instance_of(HTTParty).to receive(:post)
+        expect(HTTParty).to receive(:post).with(reporter.success_url, {body: params})
         reporter.report_success params
       end
     
       it "should report failure" do
-        expect_any_instance_of(HTTParty).to receive(:post)
+        expect(HTTParty).to receive(:post).with(reporter.failure_url, {body: params})
         reporter.report_failure params
       end
     
       it "should report status" do
-        expect_any_instance_of(HTTParty).to receive(:post)
+        expect(HTTParty).to receive(:post).with(reporter.status_url, {body: params})
         reporter.report_status params
       end
     end

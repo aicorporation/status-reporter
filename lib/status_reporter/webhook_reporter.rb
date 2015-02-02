@@ -4,12 +4,6 @@ require 'lib/status_reporter/base_reporter'
 class WebhookReporter < BaseReporter
 
   attr_accessor :success_url, :failure_url, :status_url
-
-  def initialize the_success_url=nil, the_failure_url=nil, the_status_url=nil
-    success_url = the_success_url
-    failure_url = the_failure_url
-    status_url = the_status_url
-  end
   
   def report_success params=nil
     HTTParty.post(success_url, {body: params}) if success_url
