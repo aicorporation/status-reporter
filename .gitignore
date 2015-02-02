@@ -61,3 +61,5 @@ api_docs
 
 *.war
 *.class
+
+Gemfile.lock

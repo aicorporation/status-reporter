@@ -1,0 +1,20 @@
+language: ruby
+
+##
+# Use a fast-starting build container as we do
+# not need to run sudo.
+sudo: false
+
+##
+# Cache gem dependencies if they did not change
+# so the build runs faster.
+cache: bundler
+
+##
+# Test on both Jruby and MRI.
+rvm:
+  - jruby-19mode
+  - 1.9.3
+  
+jdk:
+  - openjdk7
