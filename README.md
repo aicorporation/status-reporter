@@ -1,6 +1,6 @@
 # status-reporter
 
-![Build status](https://travis-ci.org/themasterchef/status-reporter.svg?branch=master)
+![Build status](https://travis-ci.org/thoughtified/status-reporter.svg?branch=master)
 
 Gem for reporting on the status of things. Webhooks, pubsub, and more.
 
@@ -8,7 +8,7 @@ Gem for reporting on the status of things. Webhooks, pubsub, and more.
 
 In your Gemfile:
 
-    gem 'status-reporter', github: 'themasterchef/status-reporter'
+    gem 'status-reporter', github: '<your repo>/status-reporter'
 
 ## Usage
 
