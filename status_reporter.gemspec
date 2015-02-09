@@ -4,8 +4,8 @@ Gem::Specification.new do |s|
   s.date        = '2015-02-02'
   s.summary     = 'StatusReporter'
   s.description = 'Gem for reporting on the status of things. Webhooks, pubsub, and more.'
-  s.authors     = ['Chris Kilding']
-  s.email       = 'chris@chriskilding.com'
+  s.authors     = ['Ai Corporation']
+  s.email       = 'support@aicorporation.com'
   s.files       = ['lib/status_reporter.rb']
 
   s.add_development_dependency 'rake'
