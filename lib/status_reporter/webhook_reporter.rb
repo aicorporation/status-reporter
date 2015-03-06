@@ -11,7 +11,7 @@ module StatusReporter
     end
   
     def report_failure params=nil
-      HTTParty.post(failure_url, {body: params}) if failure_url
+      HTTParty.delete(failure_url, {body: params}) if failure_url
     end
   
     def report_status params=nil
