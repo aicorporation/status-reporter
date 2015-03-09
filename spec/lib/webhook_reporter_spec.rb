@@ -10,7 +10,7 @@ RSpec.describe StatusReporter::WebhookReporter do
     end
   
     it "should report failure" do
-      expect(HTTParty).to receive(:post).with(reporter.failure_url, {body: nil})
+      expect(HTTParty).to receive(:delete).with(reporter.failure_url, {body: nil})
       reporter.report_failure
     end
   
@@ -31,7 +31,7 @@ RSpec.describe StatusReporter::WebhookReporter do
       end
     
       it "should report failure" do
-        expect(HTTParty).to receive(:post).with(reporter.failure_url, {body: params})
+        expect(HTTParty).to receive(:delete).with(reporter.failure_url, {body: params})
         reporter.report_failure params
       end
     
