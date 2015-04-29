@@ -13,11 +13,6 @@ RSpec.describe StatusReporter::WebhookReporter do
       expect(HTTParty).to receive(:delete).with(reporter.failure_url, {body: nil})
       reporter.report_failure
     end
-  
-    it "should report status" do
-      expect(HTTParty).to receive(:put).with(reporter.status_url, {body: nil})
-      reporter.report_status
-    end
     
     context "with params to send" do
       let(:params) {
@@ -35,10 +30,6 @@ RSpec.describe StatusReporter::WebhookReporter do
         reporter.report_failure params
       end
     
-      it "should report status" do
-        expect(HTTParty).to receive(:put).with(reporter.status_url, {body: params})
-        reporter.report_status params
-      end
     end
   end
 end
